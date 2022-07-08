@@ -5,6 +5,8 @@ Slide joystick to move.
 
 Whatever you do, don't touch the obstacles. It's make you start over.
 
+If you want to apk file, here it is: https://drive.google.com/file/d/1r_yAYhDA7FVZq2zeo7F2-T3YXrnBvr8e/view
+
 When you have motorbike or car, keep eye on your fuel bar and collect the fuel can on road.
 
 
