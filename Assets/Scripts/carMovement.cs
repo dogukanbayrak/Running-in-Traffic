@@ -85,6 +85,11 @@ public class carMovement : MonoBehaviour
         {
             nextChapter();
         }
+
+        if (collision.gameObject.tag == "lastlevel")
+        {
+            SceneManager.LoadScene("chapterone");
+        }
     }
     void restart()
     {
