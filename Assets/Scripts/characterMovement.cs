@@ -100,7 +100,7 @@ public class characterMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "lastlevel")
         {
-            SceneManager.LoadScene("chapterOne");
+            SceneManager.LoadScene("chapterone");
         }
         
     }
