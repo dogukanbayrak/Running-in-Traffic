@@ -11,7 +11,6 @@ public class chapterOneCharacter : MonoBehaviour
     public float jumpingSpeed;
     public float gravitySpeed;
     public float horizontalSpeed;
-    public bool jumpCheck;
     bool enemyCheck = false;
     public Animator anim;
     public Joystick joystick;
@@ -44,10 +43,7 @@ public class chapterOneCharacter : MonoBehaviour
 
         //rb.AddForce(0, gravitySpeed, 0);
 
-        if (joystick.Vertical > 0.5f && jumpCheck == false)
-        {
-            rb.AddForce(Vector3.up * jumpingSpeed, ForceMode.Impulse);
-        }
+        
         if (joystick.Horizontal > 0.5f && enemyCheck == false)
         {
             rb.AddForce(Vector3.forward * -horizontalSpeed, ForceMode.Impulse);
@@ -61,12 +57,7 @@ public class chapterOneCharacter : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            jumpCheck = false;
-            anim.SetBool("jumpingAnimCheck", false);
-
-        }
+        
 
         if (collision.gameObject.tag == "Enemy")
         {
@@ -82,17 +73,7 @@ public class chapterOneCharacter : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            jumpCheck = true;
-            anim.SetBool("jumpingAnimCheck", true);
-        }
-        
-        
-        
-    }
+    
 
     public void nextChapter()
     {
